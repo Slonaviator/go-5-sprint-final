@@ -3,12 +3,13 @@ package trainings
 import (
 	"errors"
 	"fmt"
-	"github.com/Yandex-Practicum/tracker/internal/personaldata"
-	"github.com/Yandex-Practicum/tracker/internal/spentenergy"
 	"log"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/Yandex-Practicum/tracker/internal/personaldata"
+	"github.com/Yandex-Practicum/tracker/internal/spentenergy"
 )
 
 // Training - структура содержит все необходимые данные о тренировке:

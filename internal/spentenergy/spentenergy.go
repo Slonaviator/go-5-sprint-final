@@ -21,9 +21,16 @@ const (
 func WalkingSpentCalories(steps int, weight, height float64, duration time.Duration) (float64, error) {
 	// TODO: реализовать функцию
 	if duration <= 0 {
-		return 0, errors.New("WalkingSpentCalories: incorrect time")
-	} else if steps <= 0 || height <= 0 || weight <= 0 {
-		return 0, errors.New("walkingSpentCalories: steps, weight, height <= 0")
+		return 0, errors.New("walkingSpentCalories: incorrect time")
+	}
+	if steps <= 0 {
+		return 0, errors.New("walkingSpentCalories: steps <= 0")
+	}
+	if height <= 0 {
+		return 0, errors.New("walkingSpentCalories: height <= 0")
+	}
+	if weight <= 0 {
+		return 0, errors.New("walkingSpentCalories: weight <= 0")
 	}
 
 	averageSpeed := MeanSpeed(steps, height, duration)
@@ -40,8 +47,15 @@ func RunningSpentCalories(steps int, weight, height float64, duration time.Durat
 	// TODO: реализовать функцию
 	if duration <= 0 {
 		return 0, errors.New("RunningSpentCalories: incorrect time")
-	} else if steps <= 0 || height <= 0 || weight <= 0 {
-		return 0, errors.New("runningSpentCalories: steps, weight, height <= 0")
+	}
+	if steps <= 0 {
+		return 0, errors.New("walkingSpentCalories: steps <= 0")
+	}
+	if height <= 0 {
+		return 0, errors.New("walkingSpentCalories: height <= 0")
+	}
+	if weight <= 0 {
+		return 0, errors.New("walkingSpentCalories: weight <= 0")
 	}
 
 	averageSpeed := MeanSpeed(steps, height, duration)
